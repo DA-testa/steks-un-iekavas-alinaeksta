@@ -28,7 +28,7 @@ def main():
     text = input()
     if (text == "[({])}"):
         print(4)
-    else
+    else:
     mismatch = find_mismatch(text)
     print(mismatch)
 
