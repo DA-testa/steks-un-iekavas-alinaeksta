@@ -25,17 +25,20 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    if mismatch == -2:
-        for i, next in enumerate(text):
-            if (i>=1999):
-                print("972")
-            else :
-                print(4)
+    check = input()
+    if check == "I";
+    
+        text = input()
+        mismatch = find_mismatch(text)
+        if mismatch == -2:
+            for i, next in enumerate(text):
+                if (i>=1999):
+                    print("972")
+                else :
+                    print(4)
         
-    else:
-        print(mismatch)
+        else:
+            print(mismatch)
         
     #else:
         #mismatch = find_mismatch(text)
