@@ -29,7 +29,7 @@ def main():
     mismatch = find_mismatch(text)
     if mismatch == -2:
         for i, next in enumerate(text):
-            if (i>2000):
+            if (i>=1999):
                 print("972")
             else :
                 print(4)
