@@ -13,7 +13,7 @@ def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
         if next in "([{":
-            opening_brackets_stack.append(Bracket(next,i+1))
+            opening_brackets_stack.append(Bracket(next,i-1))
 
         if next in ")]}":
             if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char, next):
@@ -25,20 +25,12 @@ def find_mismatch(text):
 
 
 def main():
-    check = input()
-    if check == "I":
+    #check = input()
+    #if check == "I":
     
-        text = input()
-        mismatch = find_mismatch(text)
-        if mismatch == -2:
-            for i, next in enumerate(text):
-                if (i>=1999):
-                    print("972")
-                else :
-                    print(4)
-        
-        else:
-            print(mismatch)
+    text = input()
+    mismatch = find_mismatch(text)
+    print(mismatch)
         
     #else:
         #mismatch = find_mismatch(text)
