@@ -13,10 +13,8 @@ def find_mismatch(text):
         if next in "([{":
             opening_brackets_stack.append(Bracket(next, i - 1 ))
         if next in ")]}":
-            if not opening_brackets_stack:
+            if not opening_brackets_stack or if not are_matching(opening_brackets_stack[-1].char, next):
                 return i + 1 
-            if not are_matching(opening_brackets_stack[-1].char, next):
-                return i + 1
             
             opening_brackets_stack.pop()
     
@@ -26,9 +24,9 @@ def find_mismatch(text):
 
 def main():
 
-    test_url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
-    check_for_I = input()
-    if check_for_I.startswith("I"):
+    test_url = "https://github.com/DA-testa/steks-un-iekavas-alinaeksta/blob/main/test/0"
+    check = input()
+    if check.startswith("I"):
         text = input()
     else:
         text = requests.get(test_url).text
@@ -37,5 +35,6 @@ def main():
         print("Success")
     else:
         print(find_mismatch(text))
+        
 if __name__ == "__main__":
     main()
