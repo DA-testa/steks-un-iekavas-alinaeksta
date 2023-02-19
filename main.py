@@ -35,7 +35,7 @@ def main():
     if find_mismatch(text) is None:
         print("Success")
     else:
-        print(find_mismatch(text)
+        print(find_mismatch(text))
 
 
 
