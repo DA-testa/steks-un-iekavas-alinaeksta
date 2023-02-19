@@ -25,16 +25,18 @@ def find_mismatch(text):
 
 
 def main():
-    #check = input()
-    #if check == "I":
-    
-    text = input()
-    mismatch = find_mismatch(text)
-    print(mismatch)
-        
-    #else:
-        #mismatch = find_mismatch(text)
-        #print(mismatch)
+    test_url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
+    check_for_I = input()
+    if check_for_I.startswith("I"):
+        text = input()
+    else:
+        text = requests.get(test_url).text
+
+    if find_mismatch(text) is None:
+        print("Success")
+    else:
+        print(find_mismatch(text)
+
 
 
 if __name__ == "__main__":
